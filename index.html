@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Force Download</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="space">
+<header>
+Télécharge photos
+</header>
+
+<div class="special">
+Télécharge ces photos sans frais et regarde des photos de Florise Wong et plus.
+</div>
+
+    <button id="downloadBtn">Télécharge ici:</button>
+
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function () {
+            const link = document.createElement("a");
+            link.href = "SDC16502.JPG";
+            link.download = "SDC16502.JPG";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</div>
+</body>
+</html>
